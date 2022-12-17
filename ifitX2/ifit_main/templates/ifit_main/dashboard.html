@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <main class="dynamic-page">
+        <span id="topest"></span>
+        <div class="row-1">
+            <h1 class="heading">Welcome Back 🎉 </h1>
+            <button class="material-symbols-rounded" style="">notifications</button>
+        </div>
+        <div class="row">
+            <div style="display:flex;gap:10px;">
+                <h1 class="heading">Tasks</h1>
+                <div style="position">sadf</div>
+            </div>
+            <div id="tasks">
+                {% for color in iter %}
+                    <div class="container task" style="background-color:{{color}}">This is someting</div>
+                    <div class="container task" style="background-color:{{color}}">This is someting</div>
+                    <div class="container task" style="background-color:{{color}}">This is someting</div>
+                    <div class="container task" style="background-color:{{color}}">This is someting</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="heading">Analytics</h1>
+            <div id="analytics">
+                <div class="container analytics-cnt" style="background-color:transparent;">
+                    <canvas id="activity-per-day-chart"></canvas>
+                </div>
+                <div class="container analytics-cnt">This is someting</div>
+            </div>
+        </div>
+        <div class="row">
+            <h1 class="heading">Workouts</h1>
+            <div id="workout-vid">
+                {% for color in iter %}
+                <div class="vid-cnt">
+                    <iframe scrolling="no" style="border-radius:20px;" src="{% static 'assets/images/project1.png' %}" type="video/mp4" allowfullscreen autoplay="false" class="vid-cnt"></iframe>
+                    <span>Man at Gym</span>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </main>
+    
+    {% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/dashboard.js' %}" type="text/javascript"></script>
+{% endblock %}

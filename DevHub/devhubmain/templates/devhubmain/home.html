@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}DevHub{% endblock title %}
+
+
+{% block body %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" style="background: url({% static 'images/hero-bg.jpg' %}) top center;">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 pb-0">Dev<span>Hub</span></h1>
+      <a href="#about" class="about-btn scrollto">Get Started</a>
+    </div>
+    
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    {% include "devhubmain/about.html" %}
+
+    <!-- =======  F.A.Q Section ======= -->
+    {% include "devhubmain/faq.html" %}
+
+    <!-- ======= Contact Section ======= -->
+    {% include "devhubmain/contact.html" %}
+  </main>
+
+{% endblock body %}

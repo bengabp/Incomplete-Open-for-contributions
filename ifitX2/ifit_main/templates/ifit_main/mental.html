@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/common_styles.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main class="dynamic-page">
+        <span id="topest"></span>
+        <h1 class="">Jokes,Riddles, Facts and Quotes</h1>
+        {% csrf_token %}
+        <div class="fit-workout-cat">
+            <div class="fit-category-item" onclick="scrollToSec('heading-facts')">Facts</div>
+            <div class="fit-category-item" onclick="scrollToSec('heading-quotes')">Quotes</div>
+            <div class="fit-category-item" onclick="scrollToSec('heading-jokes')">Jokes</div>
+            <div class="fit-category-item" onclick="scrollToSec('heading-riddles')">Riddles</div>
+        </div>
+
+        <div>
+            <h1 class="heading" id="heading-facts">Facts</h1>
+            <div class="auto-wrap-container" id="facts-container">
+                {% for i in range %}
+                    <div class="fit-workout-vid quote-item" style="height:109px; width:256px;">
+                        <div style='display:flex;gap:20px;align-items:cener;'>
+                            <span class='mental-cat-label'></span>
+                        </div>
+                        <p style="height:100px;">
+                        </p>
+                        <span class="mental-cat-quote-author mental-cat-label"></span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h1 class="heading" id="heading-quotes">Quotes</h1>
+            <div class="auto-wrap-container" id="quotes-container">
+                {% for i in range %}
+                    <div class="fit-workout-vid quote-item" style="height:109px; width:256px;">
+                        <div style='display:flex;gap:20px;align-items:cener;'>
+                            <span class='mental-cat-label'></span>
+                        </div>
+                        <p style="height:100px;">
+                        </p>
+                        <span class="mental-cat-quote-author mental-cat-label"></span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <h1 class="heading" id="heading-jokes">Jokes</h1>
+            <div class="auto-wrap-container" id="jokes-container">
+                {% for i in range %}
+                <div class="fit-workout-vid quote-item" style="height:109px; width:256px;">
+                    <div style='display:flex;gap:20px;align-items:cener;'>
+                        <span class='mental-cat-label'></span>
+                    </div>
+                    <p style="height:100px;">
+                    </p>
+                    <span class="mental-cat-quote-author mental-cat-label"></span>
+                </div>
+            {% endfor %}
+            </div>
+
+            <h1 class="heading" id="heading-riddles">Riddles</h1>
+            <div class="auto-wrap-container" id="riddles-container">
+                {% for i in range %}
+                    <div class="fit-workout-vid quote-item" style="height:109px; width:256px;">
+                        <div style='display:flex;gap:20px;align-items:cener;'>
+                            <span class='mental-cat-label'></span>
+                        </div>
+                        <p style="height:100px;">
+                        </p>
+                        <span class="mental-cat-quote-author mental-cat-label"></span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+            
+    </main>
+    
+    {% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/mental.js' %}"></script>
+{% endblock %}

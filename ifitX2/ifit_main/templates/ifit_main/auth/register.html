@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Registration page</h1>
+    <span>Logged in as {{request.user}}</span>
+    <form action="/register" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="username" name="username">
+        <input type="password" placeholder="password" name="password">
+        <input type="password" placeholder="password confirm" name="password-confirm">
+        <button type="submit">Register</button>
+    </form>
+{% endblock %}

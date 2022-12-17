@@ -1,0 +1,15 @@
+{% load static %}
+<section id="about" style="background: url({% static 'images/about-bg.jpg' %});">
+  <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>DevHub</h2>
+          <p>Find and interact with developers through sharing ideas and thoughts. 
+            Write what you have in mind and share to the world with the click of a button</p>
+            {% if not user.is_authenticated %}
+              <a class="action-btn scrollto" href="/login">Login</a>
+            {% endif %}
+        </div>
+      </div>
+  </div>
+</section><!-- End About Section -->

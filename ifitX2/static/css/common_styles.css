@@ -1,0 +1,81 @@
+
+.auto-wrap-container{
+    display:grid;
+    align-items:center;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap:10px;
+}
+
+.fit-workout-cat{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    width:100%;
+    padding:10px;
+
+}
+
+.fit-category-item{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:10px;
+    width:max-content;
+    border-radius:10px;
+    background-color: #BFDBF7;
+    border:1px solid #BFDBF7;
+}
+
+.fit-workout-vid{
+    border-radius:10px;
+    max-width:600px;
+    padding:10px;
+    box-shadow:1px 1px solid black;
+}
+
+.mental-cat-label{
+    background-color:#BFDBF7;
+    border-radius:5px;
+    border:1px solid #BFDBF7;
+    padding:3px 8px;
+}
+
+.fact-item,.quote-item {
+    /* width:70%; */
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: flex-start;
+	background-color: #B9C7CC61;
+	/* color: white; */
+}
+
+.quote-item{
+    background-color: #edf2fb;
+}
+
+.starbtn{
+    color:var(--icon-button-bg-color);
+}
+
+
+
+@media only screen and (max-width:950px){
+    .auto-wrap-container{
+        grid-template-columns:50% 50%;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .auto-wrap-container{
+        grid-template-columns:100%;
+        gap:5px;
+        width:90%;
+    }
+
+    .fit-workout-vid{
+        max-width:450px;
+    }
+}
+
+

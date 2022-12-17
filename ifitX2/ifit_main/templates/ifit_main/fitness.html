@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/common_styles.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main class="dynamic-page">
+        <span id="topest"></span>
+        <h1 class="">Fitness</h1>
+        <div class="fit-workout-cat">
+            {% for category in categories %}
+                <div class="fit-category-item">{{category}}</div>
+            {% endfor %}
+        </div>
+        <div class="auto-wrap-container">
+            {% for i in range %}
+                <div class="fit-workout-vid"><p>
+                    You’re pretty busy, right? Between work, family life, and that new Netflix show, there isn’t a lot of extra time in the day. We get it, and that’s why the Biteable video maker and editor is ridiculously easy to use. Many of our users craft professional-looking short videos on their lunch breaks. You can too.
+                </p></div>
+            {% endfor %}
+        </div>
+    </main>
+    
+    {% endblock %}
+

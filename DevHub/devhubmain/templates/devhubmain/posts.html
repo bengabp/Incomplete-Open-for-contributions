@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "img" as baseUrl %}
+{% load humanize %}
+{% load reprocess %}
+
+{% block title %} Posts {% endblock title %}
+
+{% block body %}
+<!-- <style type="text/css">
+
+</style> -->
+<section id="hero" style="background: url({% static 'images/hero-bg.jpg' %}) top center;">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+        {% if user.is_authenticated %}
+            <form method="POST" action="/new-post">
+                {% csrf_token %}
+                <h1 style="font-size:1.8rem;text-transform: none;">Have something in mind ?...</h1>
+                <input class="form-control" rows="5" cols="80%" style="max-width:600px;margin-bottom:10px;" placeholder="Give it a title..." name="post-title">
+                <textarea class="form-control" rows="5" cols="80%" style="max-width:600px;" placeholder="...put it down here" name="post-body"></textarea>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form><br>
+            <a href="#posts">
+                <button class="btn btn-primary">Or comment on other posts</button>
+            </a>
+        {% else %}
+            <div>
+                <h1 style="font-size:1.8rem;text-transform: none;">Have something in mind ?...</h1>
+                <textarea class="form-control" rows="5" cols="80%" style="max-width:600px;" placeholder="...put it down here" readonly></textarea>
+                <a href="/login">
+                    <button class="btn btn-primary">Please login to post something.</button>
+                </a>
+            </div><br>
+            <a href="#posts">
+                <button class="btn btn-primary">or View other posts</button>
+            </a>
+        {% endif %}
+    </div>
+</section>
+    
+<section id="posts">
+    <div class="container">
+        <h1 >All Posts</h1>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <div class="card text-white bg-light mb-3">
+                        <div class="card-header">
+
+                            <h3><img src="media/{{post.creator_id|get_profile_pic_from_id}}" style="width:50px;height:50px;border-radius:50%;"> {{post.created_at|naturaltime}}</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{post.title}}</h3>
+                            <h5 class="card-text">{{post.body}}</h5>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock body %}

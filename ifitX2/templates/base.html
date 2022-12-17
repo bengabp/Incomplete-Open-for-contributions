@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifitX2</title>
+
+    <!-- Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/9a8cfa819e.js" crossorigin="anonymous"></script>
+
+    <!-- Google Icons  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <link
+        href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+        rel="stylesheet"
+        />
+
+    <!-- Custom Css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    {% block stylesheets %}
+    {% endblock %}
+
+</head>
+<body>
+    <div id="sidenav">
+        <a href="/dashboard"><button id="dashboard" class="material-symbols-rounded icon-btn  pg-nav" data-pgnav="/dashboard">dashboard</button></a>
+        <a href="/fitness"><button class="material-symbols-rounded icon-btn  pg-nav" data-pgnav="/fitness">fitness_center</button></a>
+        <a href="/chat"><button class="material-symbols-rounded icon-btn  pg-nav" data-pgnav="/chat">chat</button></a>
+        <a href="/favourites"><button class="material-symbols-rounded icon-btn  pg-nav" data-pgnav="/favourites">star</button></a>
+        <a href="/mental"><button class="material-symbols-rounded icon-btn  pg-nav" data-pgnav="/mental">psychology</button></a>
+        <button class="material-symbols-rounded icon-btn" onclick="scrollToSec('topest')">north</button>
+    </div>
+    
+    {% block body %}
+    
+    {% endblock %}
+
+    <!-- <div id="right-stats">
+        <div id="profile-cnt">
+            <img src="{% static 'assets/images/avatar.jpeg' %}" alt="Profile Image">
+            <span>Ben</span>
+        </div>
+        <div id="stats1">
+
+        </div>
+    </div> -->
+
+    <!-- Javascript Files -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" type="text/javascript"></script>
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+</html>

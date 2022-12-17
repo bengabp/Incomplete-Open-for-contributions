@@ -1,0 +1,130 @@
+{
+    "page": 1,
+    "per_page": 50,
+    "videos": [
+        {
+            "id": 4172636,
+            "width": 640,
+            "height": 640,
+            "duration": 87,
+            "full_res": null,
+            "tags": [],
+            "url": "https://www.pexels.com/video/a-man-doing-exercises-in-a-training-facility-4172636/",
+            "image": "https://images.pexels.com/videos/4172636/pexels-photo-4172636.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1200",
+            "avg_color": null,
+            "user": {
+                "id": 2587844,
+                "name": "Leonard Jose",
+                "url": "https://www.pexels.com/@leonard-jose-2587844"
+            },
+            "video_files": [
+                {
+                    "id": 601071,
+                    "quality": "sd",
+                    "file_type": "video/mp4",
+                    "width": 540,
+                    "height": 540,
+                    "fps": 29.97,
+                    "link": "https://player.vimeo.com/external/408628728.sd.mp4?s=acaa2609d94037ed7dd29b245ba3d020ac93e128&profile_id=165&oauth2_token_id=57447761"
+                },
+                {
+                    "id": 601072,
+                    "quality": "sd",
+                    "file_type": "video/mp4",
+                    "width": 240,
+                    "height": 240,
+                    "fps": 29.97,
+                    "link": "https://player.vimeo.com/external/408628728.sd.mp4?s=acaa2609d94037ed7dd29b245ba3d020ac93e128&profile_id=139&oauth2_token_id=57447761"
+                },
+                {
+                    "id": 601073,
+                    "quality": "sd",
+                    "file_type": "video/mp4",
+                    "width": 360,
+                    "height": 360,
+                    "fps": 29.97,
+                    "link": "https://player.vimeo.com/external/408628728.sd.mp4?s=acaa2609d94037ed7dd29b245ba3d020ac93e128&profile_id=164&oauth2_token_id=57447761"
+                }
+            ],
+            "video_pictures": [
+                {
+                    "id": 1228969,
+                    "nr": 0,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-0.jpg"
+                },
+                {
+                    "id": 1228970,
+                    "nr": 1,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-1.jpg"
+                },
+                {
+                    "id": 1228971,
+                    "nr": 2,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-2.jpg"
+                },
+                {
+                    "id": 1228972,
+                    "nr": 3,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-3.jpg"
+                },
+                {
+                    "id": 1228973,
+                    "nr": 4,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-4.jpg"
+                },
+                {
+                    "id": 1228974,
+                    "nr": 5,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-5.jpg"
+                },
+                {
+                    "id": 1228975,
+                    "nr": 6,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-6.jpg"
+                },
+                {
+                    "id": 1228976,
+                    "nr": 7,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-7.jpg"
+                },
+                {
+                    "id": 1228977,
+                    "nr": 8,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-8.jpg"
+                },
+                {
+                    "id": 1228978,
+                    "nr": 9,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-9.jpg"
+                },
+                {
+                    "id": 1228979,
+                    "nr": 10,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-10.jpg"
+                },
+                {
+                    "id": 1228980,
+                    "nr": 11,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-11.jpg"
+                },
+                {
+                    "id": 1228981,
+                    "nr": 12,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-12.jpg"
+                },
+                {
+                    "id": 1228982,
+                    "nr": 13,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-13.jpg"
+                },
+                {
+                    "id": 1228983,
+                    "nr": 14,
+                    "picture": "https://images.pexels.com/videos/4172636/pictures/preview-14.jpg"
+                }
+            ]
+        }
+    ],
+    "total_results": 1,
+    "url": "https://api-server.pexels.com/search/videos/workout/"
+}

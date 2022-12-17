@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <main class="dynamic-page">
+        <span id="topest"></span>
+        <h1 class="heading">Favourites</h1>
+        <div class="row">
+            <div style="display:flex;gap:10px;">
+                <h1 class="heading">Entertainment</h1>
+            </div>
+            <div id="tasks">
+                {{favitems}}
+                {% for favitem in favitems %}
+                    {{favitem}}
+                    {% if favitem.category == "fact" %}
+                        <div class="fit-workout-vid fact-item" data-hash="main_{{favitem.unique_hash}}" data-mental-category='fact'>
+                            <div style='display:flex;gap:20px;align-items:cener;'>
+                                <span class='mental-cat-label'>Fact</span>
+                                    <i class="fa-regular fa-star" data-hash="star_{{favitem.unique_hash}}" style="color:'var(--icon-normal-color)';cursor:pointer;"></i>
+                            </div>
+                            <p>
+                                {{favitem.fact}}
+                            </p>
+                        </div>
+                    {% elif favitem.category == "joke" %}
+                        <div class="fit-workout-vid fact-item" data-hash="main_{{favitem.unique_hash}}" data-mental-category='joke'>
+                            <div style='display:flex;gap:20px;align-items:cener;'>
+                                <span class='mental-cat-label'>Joke</span>
+                                    <i class="fa-regular fa-star" data-hash="star_{{favitem.unique_hash}}" style="color:'var(--icon-normal-color)';cursor:pointer;"></i>
+                            </div>
+                            <p>
+                                {{favitem.joke}}
+                            </p>
+                        </div>
+                    {% elif favitem.category == "quote" %}
+                        <div>Quote</div>
+                    {% elif favitem.category == "riddle" %}
+                        <div>Riddle</div>
+
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    
+    {% endblock %}
+
+{% block scripts %}
+{% endblock %}
